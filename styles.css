@@ -13,7 +13,7 @@ a:hover {
 .btn-secondary,
 .btn-secondary:hover,
 .btn-secondary:focus {
-  color: #333;
+  color: #63b1bc;
   text-shadow: none; /* Prevent inheritance from `body` */
   background-color: #fff;
   border: .05rem solid #fff;
@@ -27,7 +27,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
+  background-color: #63b1bc;
 }
 
 body {
@@ -109,7 +109,37 @@ body {
   color: rgba(255, 255, 255, .5);
 }
 
-div.run {
+p.run {
     font-size: 300%;
     margin-top: 10%;
+}
+p.numin {
+  font-size: 300%;
+  margin-top: 10%;
+}
+div.d-flex w-auto h-auto p-auto mx-auto flex-column {
+  margin-top: 30%;
+}
+.grid-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 20px;
+}
+.grid-child{
+  margin-top: -25px;
+  font-size:1.5vw;
+}
+input[type=tel], select {
+  max-width: 200px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(187, 180, 180);
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: center !important;
+}
+h2{
+  padding-top: 15px;
+  font-size:5vw;
 }
