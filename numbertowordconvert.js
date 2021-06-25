@@ -10,7 +10,9 @@ function toWordsconver(s) {
   s = s.toString();
     s = s.replace(/[\, ]/g, '');
     if (s != parseFloat(s))
-        return 'not a number ';
+        return 'not a number '
+    if (s == parseFloat(0))
+        return 'zero';
     var x_val = s.indexOf('.');
     if (x_val == -1)
         x_val = s.length;
