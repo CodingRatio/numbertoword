@@ -55,7 +55,7 @@
 
   
   .container {
-    max-width: 20em;
+    max-width: 80%;
   }
   
   .calculator {
@@ -64,14 +64,14 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 2em;
-    max-width: 15em;
+    max-width: 80em;
     overflow: hidden;
   }
   
   .calculator__display {
     background-color: #222222;
     color: #fff;
-    font-size: 1.714285714em;
+    font-size: 5vw;
     padding: 0.5em 0.75em;
     text-align: right;
   }
@@ -85,7 +85,7 @@
   
   .calculator__keys > * {
     background-color: #fff;
-    padding: 0.5em 1.25em;
+    padding: 25%;
     position: relative;
     text-align: center;
   }
