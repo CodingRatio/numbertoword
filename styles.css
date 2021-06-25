@@ -216,7 +216,7 @@ td{
 }
 .popup {
   display:flex;
-  
+  touch-action: manipulation;
   justify-content: center;
   position: fixed;
   width: 100vw;

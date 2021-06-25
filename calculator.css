@@ -55,6 +55,7 @@
 
   
   .container {
+    touch-action: manipulation;
     max-width: 80%;
   }
   
