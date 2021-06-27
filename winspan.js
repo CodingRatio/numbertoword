@@ -7,7 +7,7 @@ function numeroALetras(n) {
     var respuesta = '';
     if (n != parseFloat(n))
         return 'no es un numero ';
-    if (n === parseFloat(0))
+    if (n === '0')
         return 'cero';
     if (numero > 999) {
         if ((numero + '').length > 6) {
