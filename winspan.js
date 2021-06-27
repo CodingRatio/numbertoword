@@ -7,7 +7,7 @@ function numeroALetras(n) {
     var respuesta = '';
     if (n != parseFloat(n))
         return 'no es un numero ';
-    if (n == parseFloat(0))
+    if (n === parseFloat(0))
         return 'cero';
     if (numero > 999) {
         if ((numero + '').length > 6) {
@@ -174,7 +174,7 @@ function centenas_nal(n) {
         return 'quinientos'
     }
     if (n + '' == '6') {
-        return 'seiscientosd'
+        return 'seiscientos'
     }
     if (n + '' == '7') {
         return 'setecientos'
