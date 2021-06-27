@@ -189,37 +189,46 @@
           <div class="text" style="text-align: center;">
             <h3 class="headers">Calculadora</h3>
           </div>
-          <div class="container">
-            <div class="calculator">
-              <div class="calculator__display">0</div>
-              <div class="cal__ac" style="display:flex;">
-                <button data-action="clear" style="width: 75%;padding: 5%;position: relative;text-align: center;border: 1px solid hsl(0, 0%, 60%);border-style: none none solid none;background-color: #df6b6b;">AC</button><button class="key--operator" data-action="add" style="width: 25.1%;padding: 5%;position: relative;text-align: center;border: 1px solid hsl(0, 0%, 60%);border-style: none none solid solid;background-color: #8b758e;">+</button>
+          <div id="container">
+            <div id="calculator">
+              <div id="result">
+                <div id="history">
+                  <p id="history-value"></p>
+                </div>
+                <div id="output">
+                  <p id="output-value">0</p>
+                </div>
               </div>
-              <div class="calculator__keys" style="grid-template-columns: repeat(4, 1fr)">
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
-                <button class="key--operator" data-action="subtract">-</button>
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
-                <button class="key--operator" data-action="multiply">&times;</button>
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button class="key--operator" data-action="divide">÷</button>
-                <button data-action="decimal">.</button>
-                <button>0</button>
-                <button class="key--back" data-action="clear"><-</button>
-                <button class="key--equal" data-action="calculate">=</button>
+              <div id="keyboard">
+                <button class="operator" id="clear">C</button>
+                <button class="operator" id="backspace">&#129044;</button>
+                <button class="operator" id="%">TAX</button>
+                <button class="operator" id="/">&#247;</button>
+                <button class="number" id="7">7</button>
+                <button class="number" id="8">8</button>
+                <button class="number" id="9">9</button>
+                <button class="operator" id="*">&times;</button>
+                <button class="number" id="4">4</button>
+                <button class="number" id="5">5</button>
+                <button class="number" id="6">6</button>
+                <button class="operator" id="-">-</button>
+                <button class="number" id="1">1</button>
+                <button class="number" id="2">2</button>
+                <button class="number" id="3">3</button>
+                <button class="operator" id="+">+</button>
+                <button class="number" id=".">.</button>
+                <button class="number" id="0">0</button>
+                <button class="empty" id="empty"></button>
+                <button class="operator" id="=">=</button>
               </div>
             </div>
+          </div>
             <script type="text/javascript" src="calculator.js"></script>
           </div>
         </div>
-
+        <a class="closepopup" href="#">X</a>
       </div>
-      <a class="closepopup" href="#">X</a>
+      
     </div>
   </div>
   </div>
