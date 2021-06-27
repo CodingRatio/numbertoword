@@ -19,20 +19,20 @@
   font-size: 1.714285714em;
   padding: 0.5em 0.75em;
   text-align: right;
-  height: 120px;
+  
 }
 #history{
 	text-align: right;
 	height: 20px;
 	margin: 0 20px;
 	padding-top: 20px;
-	font-size: 15px;
+	font-size: 4vh;
 	color: #919191;
 }
 #output{
 	text-align: right;
 	margin: 20px 20px;
-  font-size: 3vh;
+  font-size: 10vh;
 	
 }
 #keyboard{
