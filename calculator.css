@@ -64,7 +64,23 @@
 .operator:focus, .number:focus, .empty:focus{
 	outline: 0;
 }
-
+button:nth-child(1){
+  background-color: #20b2aa00;
+  border-color: #222;
+  border-width: 2px;
+}
+button:nth-child(2){
+  background-color: #20b2aa00;
+  border-color: #222;
+  border-width: 2px;
+  text-align: center;
+}
+button:nth-child(3){
+  background-color: #20b2aa00;
+  border-color: #222;
+  border-width: 2px;
+  
+}
 button:nth-child(4){
 	font-size: 20px;
 	background-color: #20b2aa;
