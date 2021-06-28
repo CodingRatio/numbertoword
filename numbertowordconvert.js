@@ -2,12 +2,12 @@
 var th_val = ['', 'thousand', 'million', 'billion', 'trillion'];
 // System for uncomment this line for Number of English 
 // var th_val = ['','thousand','million', 'milliard','billion'];
- 
+
 var dg_val = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
 var tn_val = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
 var tw_val = ['twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
 function toWordsconver(s) {
-  s = s.toString();
+    s = s.toString();
     s = s.replace(/[\, ]/g, '');
     if (s != parseFloat(s))
         return 'not a number '
@@ -43,11 +43,5 @@ function toWordsconver(s) {
             sk_val = 0;
         }
     }
-    if (x_val != s.length) {
-        var y_val = s.length;
-        str_val += 'point ';
-        for (var i = x_val + 1; i < y_val; i++)
-            str_val += dg_val[n_val[i]] + ' ';
+        return str_val.replace(/\s+/g, ' ');
     }
-    return str_val.replace(/\s+/g, ' ');
-}

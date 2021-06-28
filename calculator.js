@@ -1,4 +1,3 @@
-
 function getHistory() {
     return document.getElementById("history-value").innerText;
 }
@@ -15,6 +14,9 @@ function printOutput(num) {
     else {
         document.getElementById("output-value").innerText = getFormattedNumber(num);
     }
+}
+function translate(num){
+    return document.getElementById("num1").value  = +(Math.round(num + "e+2")  + "e-2");
 }
 function getFormattedNumber(num) {
     var num = num.toString(); 
@@ -35,20 +37,25 @@ var operator = document.getElementsByClassName("operator");
 for (var i = 0; i < operator.length; i++) {
     operator[i].addEventListener('click', function () {
         if (this.id == "clear") {
-            printOutput("");
+            output = "0";
+            printOutput(output);
             printHistory("");
         }
-        if (this.id == "%") {
+        else if (this.id == "%") {
             var output = reverseNumberFormat(getOutput()).toString();
             output = eval(output+"*1.08" );
             printOutput(output.toFixed(2));
         }
         else if (this.id == "backspace") {
             var output = reverseNumberFormat(getOutput()).toString();
-            if (output) {//if output has a value
+            if (output.length > 1) {//if output has a value
                 output = output.substr(0, output.length - 1);
                 printOutput(output);
             }
+            else if (output.length === 1){
+                printOutput(0);
+            }
+            
         }
         else {
             var output = getOutput();
@@ -62,7 +69,8 @@ for (var i = 0; i < operator.length; i++) {
                 history = history + output;
                 if (this.id == "=") {
                     var result = eval(history);
-                    printOutput(result);
+                    printOutput((Math.round(result + "e+2")  + "e-2"));
+                    translate(result);
                     printHistory("");
                 }
                 else {
