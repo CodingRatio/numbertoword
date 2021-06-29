@@ -184,7 +184,6 @@ th{
   border-bottom: 1px solid hsla(0,0%,100%,.1);
   border-bottom-color: hsla(0,0%,100%,.25);
   padding-top: 15px;
-  font-size: 1.4vw;
   color: rgb(239, 239, 239);
   
 }
@@ -193,7 +192,6 @@ td{
 
   padding: 15px;
   border-bottom: 1px solid hsla(0,0%,100%,.1);
-  font-size: 1.2vw;
   color: rgb(239, 239, 239);
   line-height: 1.6;
 }
