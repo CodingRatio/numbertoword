@@ -1,5 +1,5 @@
 function getHistory() {
-    return document.getElementById("history-value").innerText;
+    return document.getElementById("history-value").textContent;
 }
 function printHistory(num) {
     document.getElementById("history-value").innerText = num;
@@ -34,17 +34,42 @@ function reverseNumberFormat(num) {
     return (num);
 }
 var operator = document.getElementsByClassName("operator");
+const tag = document.querySelector(".calculator")        
+
+
 for (var i = 0; i < operator.length; i++) {
     operator[i].addEventListener('click', function () {
+        
         if (this.id == "clear") {
             output = "0";
             printOutput(output);
             printHistory("");
         }
         else if (this.id == "%") {
+            var output = getOutput()
+            let tempout
+            let outpercent
+        
+            var history = getHistory()
+            theOP = history[history.length-1]
+            function firstNum (x){
+                let xy = ""
+                for(i=0; i < x.length-1;i++){
+                    xy += x[i]  
+                };return xy
+            }
+            console.log(firstNum(history))
+            console.log(output)
+            outpercent = output
+            tempout = eval(`${firstNum(history)} * (${(output)}/100)`)
+            output =eval(`${firstNum(history)} ${theOP} ${tempout}`)
+            printOutput(output);
+            printHistory(`${firstNum(history)} ${theOP} (${outpercent}%)`)
+        }
+        else if (this.id === "negative"){
             var output = reverseNumberFormat(getOutput()).toString();
-            output = eval(output+"*1.08" );
-            printOutput(output.toFixed(2));
+            output = eval(output+"*-1" );
+            printOutput(output);
         }
         else if (this.id == "backspace") {
             var output = reverseNumberFormat(getOutput()).toString();
@@ -75,6 +100,7 @@ for (var i = 0; i < operator.length; i++) {
                 }
                 else {
                     history = history + this.id;
+
                     printHistory(history);
                     printOutput("");
                 }
